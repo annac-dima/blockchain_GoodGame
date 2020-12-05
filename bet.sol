@@ -14,8 +14,8 @@ contract Bet is Ownable {
         uint id_bet;
         uint id_challenger;
         uint id_accepter;
-        address challenger;
-        address accepter;
+        address payable challenger;
+        address payable accepter;
         string player_name_challenger;
         string player_name_accepter;
         uint256 price_challenger;
