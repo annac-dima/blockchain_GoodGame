@@ -14,8 +14,8 @@ contract Bet is Ownable {
         uint id_bet;
         uint id_challenger;
         uint id_accepter;
-        address payable challenger;
-        address payable accepter;
+        address challenger;
+        address accepter;
         string player_name_challenger;
         string player_name_accepter;
         uint256 price_challenger;
@@ -41,7 +41,7 @@ contract Bet is Ownable {
     
     
     // Publish a new bet 
-    function publishBet(uint _idC, uint _idA, address payable _challenge, address payable _accept, uint256 _priceC, uint256 _priceA, string memory _playerA, 
+    function publishBet(uint _idC, uint _idA, address _challenge, address _accept, uint256 _priceC, uint256 _priceA, string memory _playerA, 
     string memory _playerC) public onlyOwner {
         // Only GoodGame, the first deployer, can invoke this contract 
         // Increase the bet counter
