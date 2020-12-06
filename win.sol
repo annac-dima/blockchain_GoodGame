@@ -11,7 +11,8 @@ contract Win is Betting {
     uint commission_cost = 3;
     
     // Only GG can transfer ETH from loser to winner and charge the commission fee
-    function payOutChallenger(uint _idBet, bool _winnC, address payable _C, address payable _A) public onlyOwner returns(bool success, string memory name_winner) {
+    function payOutChallenger(uint _idBet, bool _winnC, address payable _C, address payable _A) public onlyOwner returns(bool success, 
+    string memory name_winner) {
         require(all_bets[_idBet].challenger == _C && all_bets[_idBet].accepter == _A);
         require(all_bets[_idBet].challenger_pay == true && all_bets[_idBet].accepter_pay == true);
         
